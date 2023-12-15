@@ -1,16 +1,22 @@
-Clone rep 
-create docker image from pipfile
+Веб-сервіс розпізнавання кольорових зображень
+Цей веб-сервіс призначений для завантаження кольорових зображень та розпізнавання кольорів на них. 
+Користувач може використовувати веб-інтерфейс для завантаження зображень та перегляду результатів розпізнавання. 
+Також, система зберігає історію завантажених зображень разом з результатами розпізнавання кольорів.
+
+ІНСТРУКЦІЯ КОРИСТУВАННЯ
+1. Clone rep 
+2. create docker image from pipfile
     docker build -t color_recognition .
-create docker container from image
+3. create docker container from image
     docker run -p 5000:5000 color_recognition
-create database tables in docker container terminal
+4. create database tables in docker container terminal
     create new terminal
     docker ps -a // copy container id of running container
     docker exec -it containerID bash // launch bash in container
     flask shell
     db.create_all() // creates tables in database
     exit() // exit from flask shell 
-extra commands
+5. extra commands
     docker images // return list of images
     docker ps // returns list of running containers
     docker ps -a // returns list of all containers
@@ -19,3 +25,12 @@ extra commands
     docker rmi imageID // removes image
     docker start -i containerID // starts container
     docker stop containerID // stops container
+
+ТЕХНІЧНІ ДЕТАЛІ
+Сервіс побудований з використанням таких технологій:
+
+Мова програмування: Python, HTML, CSS
+Фреймворк:TensorFlow
+Модель розпізнавання: TensorFlow
+
+
